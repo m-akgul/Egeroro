@@ -1,0 +1,91 @@
+﻿<header id="ft-header" class="ft-header-section header-style-three">
+    <div class="container">
+        <div class="ft-header-content position-relative">
+            <div class="ft-header-top d-flex justify-content-end ul-li">
+                <ul>
+                    <li><i class="far fa-envelope"></i> info@egeroro.com</li>
+                </ul>
+            </div>
+            <div class="ft-header-main-menu d-flex align-items-center justify-content-between">
+                <div class="ft-brand-logo">
+                    <a href="/"><img src="/assets/img/logo/logo.svg" alt=""></a>
+                </div>
+                <div class="ft-header-main-menu-cta  d-flex align-items-center">
+                    <nav class="ft-main-navigation clearfix ul-li">
+                        <ul id="ft-main-nav" class="nav navbar-nav clearfix">
+
+                            <li><a href="/">Ana Sayfa</a></li>
+                            <li><a href="/AboutUs/Index">Hakkımızda</a></li>
+
+                            <li class="dropdown">
+                                <a href="/OurServices/Index">Hizmetlerimiz</a>
+                                <ul class="dropdown-menu clearfix">
+                                    @await Component.InvokeAsync("_OurServicesDropdown")
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="/Fleet/Index">Filomuz</a>
+                                <ul class="dropdown-menu clearfix">
+                                    @await Component.InvokeAsync("_FleetDropdown")
+                                </ul>
+                            </li>
+
+                            <li><a href="/Gallery/Index">Galeri</a></li>
+                            <li><a href="/Contact/Index">İletişim</a></li>
+                            <li><a href="#">EN</a></li>
+                        </ul>
+                    </nav>
+                    <div class="ft-header-cta-btn">
+                        <a class="d-flex justify-content-center align-items-center" href="#">
+                            <i class="fas fa-phone-alt"></i> +90 (216) 384 88 91
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile_menu position-relative">
+                <div class="mobile_menu_button open_mobile_menu">
+                    <i class="fal fa-bars"></i>
+                </div>
+
+                <div class="mobile_menu_wrap">
+                    <div class="mobile_menu_overlay open_mobile_menu"></div>
+                    <div class="mobile_menu_content">
+                        <div class="mobile_menu_close open_mobile_menu">
+                            <i class="fal fa-times"></i>
+                        </div>
+                        <div class="m-brand-logo">
+                            <a href="%21.html#"><img src="/assets/img/logo/logo4.png" alt=""></a>
+                        </div>
+                        <nav class="mobile-main-navigation  clearfix ul-li">
+                            <ul id="m-main-nav" class="navbar-nav text-capitalize clearfix">
+
+                                <li><a href="/">Ana Sayfa</a></li>
+                                <li><a href="/AboutUs/Index">Hakkımızda</a></li>
+
+                                <li class="dropdown">
+                                    <a href="/OurServices/Index">Hizmetlerimiz</a>
+                                    <ul class="dropdown-menu clearfix">
+                                        @await Component.InvokeAsync("_OurServicesDropdown")
+                                    </ul>
+                                </li>
+
+                                <li class="dropdown">
+                                    <a href="/Fleet/Index">Filomuz</a>
+                                    <ul class="dropdown-menu clearfix">
+                                        @await Component.InvokeAsync("_FleetDropdown")
+                                    </ul>
+                                </li>
+
+                                <li><a href="/Gallery/Index">Galeri</a></li>
+                                <li><a href="/Contact/Index">İletişim</a></li>
+                                <li><a href="#">EN</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <!-- /Mobile-Menu -->
+            </div>
+        </div>
+    </div>
+</header>

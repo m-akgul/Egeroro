@@ -1,0 +1,74 @@
+﻿@using Egeroro.Entity.Concrete
+@model Fleet
+
+<!-- Start of Breadcrumb section
+    ============================================= -->
+<section id="ft-breadcrumb" class="ft-breadcrumb-section position-relative" data-background="@Model.MainPageImage">
+    <span class="background_overlay"></span>
+    <span class="design-shape position-absolute"><img src="/assets/img/shape/tmd-sh.png" alt=""></span>
+    <div class="container">
+        <div class="ft-breadcrumb-content headline text-center position-relative">
+            <h2>Ege Gaz-1</h2>
+            <div class="ft-breadcrumb-list ul-li">
+                <ul>
+                    <li><a href="/">Ana Sayfa</a></li>
+                    <li>Filomuz </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Breadcrumb section
+    ============================================= -->
+<!-- Start of Project details  section
+    ============================================= -->
+<section id="ft-project-details" class="ft-project-details-section page-padding">
+    <div class="container">
+        <div class="ft-project-overview">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="ft-project-details-img">
+                        <img src="@Model.Image" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="ft-portfolio-overview-text headline">
+                        <div class="project-title-overview text-center">
+                            <h3>Filo Bilgileri</h3>
+                        </div>
+                        <div class="ft-portfolio-overview-list-value">
+                            <div class="ft-portfolio-overview-list  ul-li-block">
+                                <ul>
+                                    <li>Gemi Adı: <span>@Model.ShipName</span></li>
+                                    <li>Bayrağı: <span>@Model.Flag</span></li>
+                                    <li>Bağlama Limanı: <span>@Model.PortofRegistry</span></li>
+                                    <li>Yolcu Kapasitesi:  <span>@Model.PassengerCapacity</span></li>
+                                    <li>Grt:  <span>@Model.GrossRegisterTonnage</span></li>
+                                    <li>Dwt:  <span>@Model.DeadweightTonnage</span></li>
+                                    <li>Tam Boy:  <span>@Model.OverallLength m</span></li>
+                                    <li>Kütük Eni:  <span>@Model.Beam m</span></li>
+                                    <li>Max. Sürat:  <span>@Model.MaxSpeed kn</span></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ft-project-overview-text-wrapper headline pera-content">
+            <h3>
+                @Model.ShipName
+            </h3>
+
+        </div>
+    </div>
+</section>
+<!-- End of Project details section
+    ============================================= -->
+
+
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="assets/js/knob.js"></script>
+<script src="assets/js/gmaps.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk2HrmqE4sWSei0XdKGbOMOHN3Mm2Bf-M&amp;ver=2.1.6"></script>

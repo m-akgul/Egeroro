@@ -1,0 +1,32 @@
+﻿@model Egeroro.Entity.Concrete.Gallery
+
+
+
+<h1>Delete</h1>
+
+<h3>Silmek istediğinize eminmisiniz ?</h3>
+<div>
+    <h4>Hizmet</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MainPageImage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MainPageImage)
+        </dd>
+    </dl>
+
+    <form asp-action="DeleteGallery">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a class="btn btn-primary" asp-action="Gallery">Back to List</a>
+    </form>
+</div>
+

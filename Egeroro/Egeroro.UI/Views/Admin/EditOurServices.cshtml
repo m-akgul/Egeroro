@@ -1,0 +1,74 @@
+﻿@model Egeroro.Entity.Concrete.OurServices
+
+
+
+<h1>Edit</h1>
+
+<h4>Hizmetlerimiz</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditOurServices">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Description" class="control-label"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IconUrl" class="control-label"></label>
+                <input asp-for="IconUrl" class="form-control" />
+                <span asp-validation-for="IconUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DetailDescription" class="control-label"></label>
+                <input asp-for="DetailDescription" class="form-control" />
+                <span asp-validation-for="DetailDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DetailTitle2" class="control-label"></label>
+                <input asp-for="DetailTitle2" class="form-control" />
+                <span asp-validation-for="DetailTitle2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DetailDescription2" class="control-label"></label>
+                <input asp-for="DetailDescription2" class="form-control" />
+                <span asp-validation-for="DetailDescription2" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DetailTitle3" class="control-label"></label>
+                <input asp-for="DetailTitle3" class="form-control" />
+                <span asp-validation-for="DetailTitle3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DetailDescription3" class="control-label"></label>
+                <input asp-for="DetailDescription3" class="form-control" />
+                <span asp-validation-for="DetailDescription3" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DetailImage" class="control-label"></label>
+                <input asp-for="DetailImage" class="form-control" />
+                <span asp-validation-for="DetailImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Edit" class="btn btn-info" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a class="btn btn-primary" asp-action="OurServices">Back to List</a>
+</div>
+
+

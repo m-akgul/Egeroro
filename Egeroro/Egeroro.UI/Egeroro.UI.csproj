@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Egeroro.Business\Egeroro.Business.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\Egeroro.Entity\Egeroro.Entity.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\AboutUs\" />
+    <None Remove="Views\LayoutPartialView\" />
+    <None Remove="Views\Contact\" />
+    <None Remove="Views\OurServices\" />
+    <None Remove="ViewComponents\" />
+    <None Remove="ViewComponents\Default\" />
+    <None Remove="Views\Fleet\" />
+    <None Remove="Views\Shared\Components\" />
+    <None Remove="Views\Shared\Components\_OurExpertise\" />
+    <None Remove="Views\Shared\Components\_OurTeam\" />
+    <None Remove="Views\Gallery\" />
+    <None Remove="Views\Shared\Components\_OurServicesDropdown\" />
+    <None Remove="Views\Shared\Components\_FleetDropdown\" />
+    <None Remove="Views\Admin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\AboutUs\" />
+    <Folder Include="Views\LayoutPartialView\" />
+    <Folder Include="Views\Contact\" />
+    <Folder Include="Views\OurServices\" />
+    <Folder Include="ViewComponents\" />
+    <Folder Include="ViewComponents\Default\" />
+    <Folder Include="Views\Fleet\" />
+    <Folder Include="Views\Shared\Components\" />
+    <Folder Include="Views\Shared\Components\_OurExpertise\" />
+    <Folder Include="Views\Shared\Components\_OurTeam\" />
+    <Folder Include="Views\Gallery\" />
+    <Folder Include="Views\Shared\Components\_OurServicesDropdown\" />
+    <Folder Include="Views\Shared\Components\_FleetDropdown\" />
+    <Folder Include="Views\Admin\" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,46 @@
+﻿@using Egeroro.Entity.Concrete
+@model List<OurExpertise>
+<section id="ft-about-3" class="ft-about-section-3">
+    <div class="container">
+        <div class="ft-about-content-3">
+            <div class="row">
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="ft-about-img-wrapper-3 position-relative">
+                        <div class="ft-about-img-3">
+                            <img src="@Model.First().Image" alt="">
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ft-about-text-3">
+                        <div class="ft-section-title-3 headline wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                            <span class="text-uppercase">We specialise in the transportation</span>
+                            <h2>
+                                @Model.First().Title
+                            </h2>
+                        </div>
+                        <div class="ft-about-sub-text wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
+                            @Model.First().Description1
+                        </div>
+                        <div class="ft-about-feature-3 wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="ft-about-feature-text">
+                                        @Model.First().Description2
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="ft-about-feature-text">
+                                        @Model.First().Description3
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

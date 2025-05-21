@@ -1,0 +1,178 @@
+﻿@using Egeroro.Entity.Concrete
+@model OurServices
+<!-- Start of Breadcrumb section
+    ============================================= -->
+<section id="ft-breadcrumb" class="ft-breadcrumb-section position-relative" data-background="/assets/img/bg/bread-bg.jpg">
+    <span class="background_overlay"></span>
+    <span class="design-shape position-absolute"><img src="/assets/img/shape/tmd-sh.png" alt=""></span>
+    <div class="container">
+        <div class="ft-breadcrumb-content headline text-center position-relative">
+            <h2>Tehlikeli Madde Roro Hizmetleri</h2>
+            <div class="ft-breadcrumb-list ul-li">
+                <ul>
+                    <li><a href="/">Ana Sayfa</a></li>
+                    <li>Hizmetlerimiz</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Breadcrumb section
+    ============================================= -->
+<!-- Start of Service details section
+    ============================================= -->
+<section id="ft-service-details" class="ft-service-details-section page-padding">
+    <div class="container">
+        <div class="ft-service-details-content">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="ft-service-sidebar">
+                        <div class="ft-service-sidebar-widget headline ul-li-block">
+                            <div class="service-category-widget">
+                                <h3 class="widget-title">Hizmetlerimiz</h3>
+                                <ul>
+                                    @await Component.InvokeAsync("_OurServicesDropdown")
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ft-service-sidebar-widget headline ul-li-block">
+                            <div class="service-form-widget">
+                                <h3 class="widget-title">Online Destek Hattı</h3>
+                                <form action="#">
+                                    <input type="text" placeholder="Adınız Soyadınız">
+                                    <input type="email" placeholder="E-Posta Adresiniz">
+                                    <input type="text" placeholder="Telefon Numaranız">
+                                    <textarea name="#" placeholder="Mesajınız"></textarea>
+                                    <button>Gönder</button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="ft-service-details-content-wrapper headline pera-content">
+                        <div class="ft-service-details-img-wrapper">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="ft-service-details-img">
+                                        <a href="assets/images/tehlike-buyuk.jpg" class="lightbox-link">
+                                            <img src="@Model.DetailImage" alt="">
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="ft-service-details-text-wrapper">
+                        <h3>
+                            @Model.Title
+                        </h3>
+
+                        <p>
+                            @Html.Raw(Model.DetailDescription.Replace("\\n", "<br/><br/>"))
+                        </p>
+
+
+                        @if (Model.DetailTitle2 != null && Model.DetailDescription2 != null)
+                        {
+                            <h3>
+                                @Model.DetailTitle2
+                            </h3>
+                            <p>
+                                @Model.DetailDescription2
+                            </p>
+                        }
+
+
+                        @if (Model.DetailTitle3 != null && Model.DetailDescription3 != null)
+                        {
+                            <h3>
+                                @Model.DetailTitle3
+                            </h3>
+
+                            <p>@Model.DetailDescription3 </p>
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- End of Service details section
+    ============================================= -->
+
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="assets/js/knob.js"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=5e986740079aab19cff57063" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script>// SETS CAPTION AND SRC OF MAIN IMAGE
+    $(".lightbox-link").each(function (index) {
+        $(this).attr({
+            "data-fancybox": "gallery",
+            href: $(this).find("img").attr('src'),
+            "data-thumb": $(this).find("img").attr('src'),
+            "data-caption": $(this).find("img").attr('alt')
+        })
+    });
+
+    // INITIATE & CONFIGURE FANCYBOX OPTIONS
+    $(".lightbox-link").fancybox({
+        // For more info go to https://fancyapps.com/fancybox/3/
+        loop: true,
+        arrows: true,
+        infobar: true,
+        thumbs: false,
+        /*
+        thumbs: {
+            autoStart: true,
+        },
+        */
+
+        slideShow: {
+            autoStart: false,
+            speed: 3000
+        },
+        mobile: {
+            arrows: true,
+            thumbs: {
+                autoStart: false
+            },
+        },
+        buttons: [
+            // "zoom",
+            // "share",
+            "slideShow",
+            // "fullScreen",
+            "download",
+            "thumbs",
+            "close"
+        ],
+
+        // Open/close animation type
+        // Possible values:
+        //   false            - disable
+        //   "zoom"           - zoom images from/to thumbnail
+        //   "fade"
+        //   "zoom-in-out"
+        animationEffect: "zoom",
+        animationDuration: 700,
+        // Transition effect between slides
+        // Possible values:
+        //   "false"  - disable
+        //   "fade" "slide" "circular" "tube" "zoom-in-out" "rotate'
+        transitionEffect: "fade",
+        transitionDuration: 700,
+
+        // Goes to next image on click - rather than zoom
+        clickContent: function (current, event) {
+            return current.type === "image" ? "next" : false;
+        }
+    });</script>

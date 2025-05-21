@@ -1,0 +1,93 @@
+﻿@using Egeroro.Entity.Concrete
+@model List<AboutUs>
+
+<!-- Start of Breadcrumb section
+    ============================================= -->
+<section id="ft-breadcrumb" class="ft-breadcrumb-section position-relative" data-background="@Model.First().MainPageImage">
+    <span class="background_overlay"></span>
+    <span class="design-shape position-absolute"><img src="/assets/img/shape/tmd-sh.png" alt=""></span>
+    <div class="container">
+        <div class="ft-breadcrumb-content headline text-center position-relative">
+            <h2>Hakkımızda</h2>
+            <div class="ft-breadcrumb-list ul-li">
+                <ul>
+                    <li><a href="/">Ana Sayfa</a></li>
+                    <li>Hakkımızda</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Breadcrumb section
+    ============================================= -->
+<!-- Start of About section
+    ============================================= -->
+<section id="ft-about-2" class="ft-about-section-2">
+    <div class="container">
+        <div class="ft-about-content-2">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ft-about-text-wrapper-2">
+                        <div class="ft-section-title-2 headline pera-content">
+                            <h2>
+                                @Model.First().Title1
+                            </h2>
+
+                            <p>
+                                @Model.First().Description1
+
+                            </p>
+
+                            <h2 class="mt-10">
+                                @Model.First().Title2
+                            </h2>
+
+                            <ul class="list-about">
+                                @foreach (var item in @Model.First().Description2.Split("|"))
+                                    {
+                                        <li>@item</li>
+                                    }
+                            </ul>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ft-about-img-2-wrapper position-relative">
+                        <span class="ft-about-shape1 position-absolute"><img src="/assets/img/shape/ab-sh1.png" alt=""></span>
+                        <span class="ft-about-shape2 position-absolute"><img src="/assets/img/shape/ab-sh2.png" alt=""></span>
+                        <div class="ft-about-img-2">
+                            <img src="@Model.First().Image1" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of About section
+    ============================================= -->
+<!-- Start of Video section
+    ============================================= -->
+<section id="ft-video" class="ft-video-section">
+    <div class="container">
+        <div class="ft-video-content position-relative">
+            <div class="ft-video-img-play-btn">
+                <div class="ft-video-img">
+                    <img src="/assets/img/bg/v-bg.jpg" alt="">
+                </div>
+                <div class="ft-video-play">
+                    <a class="d-flex justify-content-center align-items-center position-relative video_box" href="@Model.First().Video">
+                        <i class="fas fa-play"></i>
+                        <span class="video_btn_border border_wrap-1"></span>
+                        <span class="video_btn_border border_wrap-2"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Video section
+    ============================================= -->

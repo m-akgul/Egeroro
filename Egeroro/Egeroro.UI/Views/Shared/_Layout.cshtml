@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+@await Html.PartialAsync("/Views/LayoutPartialView/_HeadPartialView.cshtml") 
+<body>
+    <div id="preloader"></div>
+    <div class="up">
+        <a href="#" class="scrollup text-center"><i class="fas fa-chevron-up"></i></a>
+    </div>
+    <!-- Start of header section
+        ============================================= -->
+    @await Html.PartialAsync("/Views/LayoutPartialView/_HeaderPartialView.cshtml")
+    <!-- End of header section
+        ============================================= -->
+    @RenderBody()
+    <!-- Start Of Footer section
+        ============================================= -->
+    @await Html.PartialAsync("/Views/LayoutPartialView/_FooterPartialView.cshtml")
+    <!-- End of Footer section
+        ============================================= -->
+    <!-- For Js Library -->
+    @await Html.PartialAsync("/Views/LayoutPartialView/_ScriptsPartialView.cshtml")
+</body>
+</html>	

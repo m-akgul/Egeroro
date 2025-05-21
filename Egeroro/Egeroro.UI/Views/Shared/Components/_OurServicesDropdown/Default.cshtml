@@ -1,0 +1,10 @@
+﻿@using Egeroro.Entity.Concrete
+@model List<OurServices>
+
+
+@foreach (var item in Model)
+{
+    <li><a href="@Url.Action("Detail", "OurServices", new { id = item.Id })">@item.Title</a></li>
+}
+
+

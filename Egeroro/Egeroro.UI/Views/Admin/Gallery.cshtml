@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Egeroro.Entity.Concrete.Gallery>
+
+<h1>Galeri</h1>
+
+
+<p>
+    <a class="btn btn-success btn-outline-dark" asp-action="AddGallery">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Image)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MainPageImage)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Image)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MainPageImage)
+                </td>
+                <td>
+                    <a class="btn btn-info" asp-action="EditGallery" asp-route-id="@item.Id">Edit</a>
+                    @*<a class="btn btn-primary" asp-action="Details" asp-route-id="@item.Id">Details</a>*@
+                    <a class="btn btn-danger" asp-action="DeleteGallery" asp-route-id="@item.Id">Delete</a>
+                    @*<form asp-action="Delete" asp-controller="Product" method="post">
+                            <input type="hidden" name="id" value="@item.Id" />
+                            <input type="hidden" name="ProductName" value="@item.Name" />
+                            <button type="submit" class="btn btn-danger"
+                                    onclick="return confirm('@item.Name isimli ürünü silmek istediğinize emin misiniz?');">
+                                Sil
+                            </button>
+                        </form>*@
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+

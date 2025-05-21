@@ -1,0 +1,79 @@
+﻿@model Egeroro.Entity.Concrete.Fleet
+
+
+
+<h1>Edit</h1>
+
+<h4>Filomuz</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditFleet">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ShipName" class="control-label"></label>
+                <input asp-for="ShipName" class="form-control" />
+                <span asp-validation-for="ShipName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <input asp-for="Image" class="form-control" />
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Flag" class="control-label"></label>
+                <input asp-for="Flag" class="form-control" />
+                <span asp-validation-for="Flag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PortofRegistry" class="control-label"></label>
+                <input asp-for="PortofRegistry" class="form-control" />
+                <span asp-validation-for="PortofRegistry" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PassengerCapacity" class="control-label"></label>
+                <input asp-for="PassengerCapacity" class="form-control" />
+                <span asp-validation-for="PassengerCapacity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GrossRegisterTonnage" class="control-label"></label>
+                <input asp-for="GrossRegisterTonnage" class="form-control" />
+                <span asp-validation-for="GrossRegisterTonnage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DeadweightTonnage" class="control-label"></label>
+                <input asp-for="DeadweightTonnage" class="form-control" />
+                <span asp-validation-for="DeadweightTonnage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OverallLength" class="control-label"></label>
+                <input asp-for="OverallLength" class="form-control" />
+                <span asp-validation-for="OverallLength" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Beam" class="control-label"></label>
+                <input asp-for="Beam" class="form-control" />
+                <span asp-validation-for="Beam" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaxSpeed" class="control-label"></label>
+                <input asp-for="MaxSpeed" class="form-control" />
+                <span asp-validation-for="MaxSpeed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MainPageImage" class="control-label"></label>
+                <input asp-for="MainPageImage" class="form-control" />
+                <span asp-validation-for="MainPageImage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Edit" class="btn btn-info" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<div>
+    <a class="btn btn-primary" asp-action="Fleet">Back to List</a>
+</div>
+
+

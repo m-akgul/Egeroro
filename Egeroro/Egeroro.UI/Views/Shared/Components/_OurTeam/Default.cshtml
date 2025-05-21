@@ -1,0 +1,34 @@
+﻿@using Egeroro.Entity.Concrete
+@model List<OurTeam>
+<section id="ft-why-choose-2" class="ft-why-choose-section-2 position-relative">
+    <span class="why-choose-bg-2"><img src="/assets/img/bg/wc-bg2.jpg" alt=""></span>
+    <div class="container">
+        <div class="ft-why-choose-content-2">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="ft-why-choose-text-2">
+                        <div class="ft-section-title-3 headline">
+                            <h2>@Model.First().Title</h2>
+                        </div>
+                        <div class="ft-why-choose-list-wrapper ul-li-block">
+                            <ul>
+                                @foreach (var item in Model.First().Description.Split("|"))
+                                    {
+                                        <li>@item</li>
+                                    }
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                    <div class="ft-about-img-wrapper-3 position-relative">
+                        <div class="ft-about-img-3">
+                            <img src="@Model.First().Image" alt="">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,144 @@
+﻿@using Egeroro.Entity.Concrete
+@model List<OurServices>
+<!-- Start of Breadcrumb section
+    ============================================= -->
+<section id="ft-breadcrumb" class="ft-breadcrumb-section position-relative" data-background="/assets/img/bg/bread-bg.jpg">
+    <span class="background_overlay"></span>
+    <span class="design-shape position-absolute"><img src="/assets/img/shape/tmd-sh.png" alt=""></span>
+    <div class="container">
+        <div class="ft-breadcrumb-content headline text-center position-relative">
+            <h2>Hizmetlerimiz</h2>
+            <div class="ft-breadcrumb-list ul-li">
+                <ul>
+                    <li><a href="/">Ana Sayfa</a></li>
+                    <li>Hizmetlerimiz</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Breadcrumb section
+    ============================================= -->
+<!-- Start of Service page section
+    ============================================= -->
+<section id="ft-service-page" class="ft-service-page-section page-padding">
+    <div class="container">
+
+        <div class="ft-service-page-items">
+            <div class="row">
+                @{ int count = 1;}
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-4 col-md-6">
+                        <div class="ft-service-innerbox-2 position-relative">
+                            <div class="ft-service-img text-center">
+                                <a href="@Url.Action("Detail", "OurServices", new { id = item.Id })">
+                                    <img src="@item.Image" alt="">
+                                </a>
+                            </div>
+                            <div class="ft-service-text position-relative headline">
+                                <h3><a href="@Url.Action("Detail", "OurServices", new { id = item.Id })">@item.Title</a></h3>
+                                <div class="ft-btn-2">
+                                    <a href="@Url.Action("Detail", "OurServices", new { id = item.Id })">
+                                        <i class="icon-first flaticon-right-arrow"></i>
+                                        <span>Detay</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ft-service-serial position-absolute">
+                                @count
+                            </div>
+                        </div>
+                    </div>
+                    count++;
+                }
+
+                @*<div class="col-lg-4 col-md-6">
+                        <div class="ft-service-innerbox-2 position-relative">
+                            <div class="ft-service-img text-center">
+                                <a href="tehlikeli-madde-roro-hizmetleri.html">
+                                    <img src="/assets/img/service/tehlikeli-madde-roro-hizmetleri.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="ft-service-text position-relative headline">
+                                <h3><a href="#">Tehlikeli Madde Roro Hizmetleri</a></h3>
+                                <div class="ft-btn-2">
+                                    <a href="tehlikeli-madde-roro-hizmetleri.html">
+                                        <i class="icon-first flaticon-right-arrow"></i>
+                                        <span>Detay</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ft-service-serial position-absolute">
+                                1
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="ft-service-innerbox-2 position-relative">
+                            <div class="ft-service-img text-center">
+                                <a href="proje-tasimaciligi.html">
+                                    <img src="/assets/img/service/proje-tasimaciligi.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="ft-service-text position-relative headline">
+                                <h3><a href="#">Proje Taşımacılığı</a></h3>
+                                <div class="ft-btn-2">
+                                    <a href="proje-tasimaciligi.html">
+                                        <i class="icon-first flaticon-right-arrow"></i>
+                                        <span>Detay</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ft-service-serial position-absolute">
+                                2
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="ft-service-innerbox-2 position-relative">
+                            <div class="ft-service-img text-center">
+                                <a href="prens-adalari.html">
+                                    <img src="/assets/img/service/prens-adalari.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="ft-service-text position-relative headline">
+                                <h3><a href="#">Prens Adaları Seferleri</a></h3>
+                                <div class="ft-btn-2">
+                                    <a href="prens-adalari.html">
+                                        <i class="icon-first flaticon-right-arrow"></i>
+                                        <span>Detay</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="ft-service-serial position-absolute">
+                                3
+                            </div>
+                        </div>
+                    </div>*@
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+<!-- End of Service page section
+    ============================================= -->
+
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="assets/js/jquery.cssslider.min.js"></script>
+<script src="assets/js/knob.js"></script>
+<script src="assets/js/gmaps.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDk2HrmqE4sWSei0XdKGbOMOHN3Mm2Bf-M&amp;ver=2.1.6"></script>
