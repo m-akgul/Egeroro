@@ -107,7 +107,7 @@ Egeroro is a four-layered .NET 6 solution designed using the Razor Pages framewo
 
 ### 🖼️ Screenshots
 
-#### Home Page
+#### Login Page
 ![Login Page](images/Login.png)
 
 #### Admin Panel
