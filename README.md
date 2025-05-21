@@ -97,11 +97,21 @@ Egeroro is a four-layered .NET 6 solution designed using the Razor Pages framewo
 
 ---
 
-## 📝 Notes
+## 🔐 Sample Admin User
 
-- Static assets (CSS, JS, images) are served from the `wwwroot` folder.  
-- All dynamic content is loaded from the database, making updates and content management more flexible.  
-- The project structure promotes maintainability and future growth.
+- To access the admin panel, type **/Admin/Login** after the URL.
+
+| Username  | Password  |
+|-----------|-----------|
+| m-akgul   | 123456    |
+
+### 🖼️ Screenshots
+
+#### Home Page
+![Login Page](images/Login.png)
+
+#### Admin Panel
+![Admin Panel](images/AdminPanel.png)
 
 ---
 
